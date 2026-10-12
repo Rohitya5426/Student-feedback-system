@@ -1,0 +1,11 @@
+CREATE DATABASE IF NOT EXISTS student_feedback;
+USE student_feedback;
+
+CREATE TABLE IF NOT EXISTS feedbacks (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  student_name VARCHAR(100) NOT NULL,
+  faculty_name VARCHAR(100) NOT NULL,
+  rating INT NOT NULL,
+  comment TEXT NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
